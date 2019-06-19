@@ -1,6 +1,15 @@
+-e git+https://github.com/rense/django-rest-camel#egg=django-rest-camel
 
-bocadillo
-bocadillo-cli
+celery
+channels
+channels_redis
+
+daphne
+django
+django-cors-headers
+django-redis
+djangorestframework
 
 invoke
+mysqlclient
 pip-tools

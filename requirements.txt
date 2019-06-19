@@ -4,26 +4,47 @@
 #
 #    pip-compile requirements.in
 #
-aiodine==1.2.6            # via bocadillo
-bocadillo-cli==0.2.2
-bocadillo==0.16.1
-certifi==2019.6.16        # via requests
-chardet==3.0.4            # via requests
-click==7.0                # via bocadillo-cli, pip-tools, uvicorn
-h11==0.8.1                # via uvicorn
-httptools==0.0.13         # via uvicorn
-idna==2.8                 # via requests
+-e git+https://github.com/rense/django-rest-camel#egg=django-rest-camel
+aioredis==1.2.0           # via channels-redis
+amqp==2.5.0               # via kombu
+asgiref==3.1.2            # via channels, channels-redis, daphne
+asn1crypto==0.24.0        # via cryptography
+async-timeout==3.0.1      # via aioredis, asgiref
+attrs==19.1.0             # via automat, twisted
+autobahn==19.6.2          # via daphne
+automat==0.7.0            # via twisted
+billiard==3.6.0.0         # via celery
+celery==4.3.0
+cffi==1.12.3              # via cryptography
+channels-redis==2.4.0
+channels==2.2.0
+click==7.0                # via pip-tools
+constantly==15.1.0        # via twisted
+cryptography==2.7         # via autobahn
+daphne==2.3.0
+django-cors-headers==3.0.2
+django-redis==4.10.0
+django==2.2.2
+djangorestframework==3.9.4
+hiredis==1.0.0            # via aioredis
+hyperlink==19.0.0         # via twisted
+idna==2.8                 # via hyperlink
+incremental==17.5.0       # via twisted
 invoke==1.2.0
-jinja2==2.10.1            # via bocadillo, bocadillo-cli
-markupsafe==1.1.1         # via jinja2
+kombu==4.6.3              # via celery
+msgpack==0.6.1            # via channels-redis
+mysqlclient==1.4.2.post1
 pip-tools==3.8.0
-python-multipart==0.0.5   # via bocadillo
-requests==2.22.0          # via bocadillo
-six==1.12.0               # via pip-tools, python-multipart
-starlette==0.12.0         # via bocadillo
-typesystem==0.2.2         # via bocadillo
-urllib3==1.25.3           # via requests
-uvicorn==0.7.3            # via bocadillo
-uvloop==0.12.2            # via uvicorn
-websockets==7.0           # via bocadillo, uvicorn
-whitenoise==4.1.2         # via bocadillo
+pycparser==2.19           # via cffi
+pyhamcrest==1.9.0         # via twisted
+pytz==2019.1              # via celery, django
+redis==3.2.1              # via django-redis
+six==1.12.0               # via autobahn, automat, cryptography, pip-tools, pyhamcrest, txaio
+sqlparse==0.3.0           # via django
+twisted==19.2.1           # via daphne
+txaio==18.8.1             # via autobahn
+vine==1.3.0               # via amqp, celery
+zope.interface==4.6.0     # via twisted
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools==41.0.1        # via pyhamcrest, zope.interface
