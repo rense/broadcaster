@@ -26,13 +26,3 @@ class MainViewSet(HTMLViewSet):
 
     def retrieve(self, request, *args, **kwargs):
         return Response(template_name='main/client.html')
-
-
-def health_check(request):
-    """ Health-check url called by AWS ELB load-balancer.
-
-         (\___(\
-         ( -   -)
-        C((')___(')
-    """
-    return HttpResponse(content="OK", status=200)

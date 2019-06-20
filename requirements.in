@@ -10,6 +10,5 @@ django-cors-headers
 django-redis
 djangorestframework
 
-invoke
 mysqlclient
 pip-tools

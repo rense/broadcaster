@@ -25,7 +25,6 @@ class ConnectionConsumer(AsyncWebsocketConsumer, Actions):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.authenticated = False
 
         self.id = uuid.uuid4().hex
         self.parser = CamelCaseJSONParser()

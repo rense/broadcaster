@@ -1,8 +1,7 @@
 from settings import (
     ACTION_MESSAGE,
     ACTION_CONNECTS,
-    ACTION_DISCONNECTS,
-    ACTION_HELLO
+    ACTION_DISCONNECTS
 )
 
 
