@@ -12,7 +12,7 @@ from apps.broadcaster.cache import (
     remove_connection,
     list_connected
 )
-from apps.broadcaster.serializers import MessageSerializer, ConnectionSerializer
+from apps.broadcaster.serializers import MessageSerializer
 from settings import (
     MAIN_GROUP_NAME,
     ACTION_MESSAGE_ERROR,
@@ -95,7 +95,6 @@ class ConnectionConsumer(AsyncWebsocketConsumer, Actions):
 
     async def send_connected_list(self):
         connected = await list_connected()
-        print(connected)
         await self.send_message(ACTION_CONNECTED, data=json.dumps(connected))
 
     async def send_error_bad_request(self):
