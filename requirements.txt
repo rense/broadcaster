@@ -14,26 +14,26 @@ attrs==19.1.0             # via automat, twisted
 autobahn==19.6.2          # via daphne
 automat==0.7.0            # via twisted
 billiard==3.6.0.0         # via celery
-celery==4.3.0
+celery==4.3.0             # via -r requirements.in
 cffi==1.12.3              # via cryptography
-channels-redis==2.4.0
-channels==2.2.0
+channels-redis==2.4.0     # via -r requirements.in
+channels==2.2.0           # via -r requirements.in, channels-redis
 click==7.0                # via pip-tools
 constantly==15.1.0        # via twisted
 cryptography==2.7         # via autobahn
-daphne==2.3.0
-django-cors-headers==3.0.2
-django-redis==4.10.0
-django==2.2.2
-djangorestframework==3.9.4
+daphne==2.3.0             # via -r requirements.in, channels
+django-cors-headers==3.0.2  # via -r requirements.in
+django-redis==4.10.0      # via -r requirements.in
+django==2.2.13            # via -r requirements.in, channels, django-cors-headers, django-redis
+djangorestframework==3.9.4  # via -r requirements.in
 hiredis==1.0.0            # via aioredis
 hyperlink==19.0.0         # via twisted
 idna==2.8                 # via hyperlink
 incremental==17.5.0       # via twisted
 kombu==4.6.3              # via celery
 msgpack==0.6.1            # via channels-redis
-mysqlclient==1.4.2.post1
-pip-tools==3.8.0
+mysqlclient==1.4.2.post1  # via -r requirements.in
+pip-tools==3.8.0          # via -r requirements.in
 pycparser==2.19           # via cffi
 pyhamcrest==1.9.0         # via twisted
 pytz==2019.1              # via celery, django
@@ -46,4 +46,4 @@ vine==1.3.0               # via amqp, celery
 zope.interface==4.6.0     # via twisted
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.0.1        # via pyhamcrest, zope.interface
+# setuptools
